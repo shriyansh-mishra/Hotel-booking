@@ -146,10 +146,13 @@ p {
     transition: 0.4s ease-in-out;
 }
 
-.carousel-inner:hover img {
-    filter: grayscale(0.3) brightness(0.4);
+.carousel-item:hover img {
+    filter:grayscale(0.3) brightness(0.4);
 }
-
+.carousel-item .content h2,
+.carousel-item .content p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
 .carousel-inner:hover::after {
     opacity: 1;
     inset: 10px;
@@ -157,7 +160,8 @@ p {
 
 .carousel-item {
     position: relative;
-
+    width: 100%;
+    height: 100%;
 }
 
 /* Content Visibility on Hover */
@@ -170,10 +174,11 @@ p {
     color: white;
     text-align: center;
     background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 50px;
     border-radius: 8px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    z-index: 10;
 }
 
 /* Show Content on Hover */
